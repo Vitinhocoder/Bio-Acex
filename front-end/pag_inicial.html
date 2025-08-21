@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="front-end-style/style_pag_inicial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Biodiversidade - FSA</title>
+</head>
+<body>
+    <!-- Pop-up personalizado -->
+    <div class="custom-popup-overlay" id="popup-overlay">
+        <div class="custom-popup">
+            <div class="popup-icon" id="popup-icon">
+                <i class="fa-solid fa-info-circle"></i>
+            </div>
+            <div class="popup-title" id="popup-title">Informação</div>
+            <div class="popup-message" id="popup-message">Mensagem do sistema</div>
+            <div class="popup-buttons" id="popup-buttons">
+                <button class="popup-btn popup-btn-primary" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <header id="header_inicial">
+        <div id="header_login">
+            <ul id="header_login_um">
+                <li><button class="btns_inicio"><a href="../back-end/pag_adm.php"> <i class="fa-regular fa-circle-user"></i> Área do Funcionário</a></button></li>
+            </ul>
+            <div class="user-status">
+                <div class="user-indicator" id="user-indicator" onclick="handleUserClick()">
+                    <div class="user-avatar" id="user-avatar"></div>
+                    <div class="user-info">
+                        <div class="user-name" id="user-name"></div>
+                        <div class="user-type" id="user-type"></div>
+                    </div>
+                    <div class="user-actions" id="user-actions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <header id="header_secundario">
+        <div id="header_lista">
+            <ul id="header_lista_img">
+                <li><img src="https://www.fsa.br/wp-content/uploads/2018/06/logo-fsa-p.png" alt="Logo FSA"></li>
+            </ul>
+            <ul id="header_lista_um">
+                <li><a href="#" id="link-meus-agendamentos" onclick="verificarLoginEAcessar(event)">
+                    <i class="fa-solid fa-calendar-check"></i> Ver Meus Agendamentos
+                </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="inicio">
+        <div id="inicio_div">
+            <div id="inicio_informacao">
+                <h1 id="titulo_informacao">Bem-vindo ao <span class="bio"> <br> Espaço Biodiversidade </span> da FSA!</h1>
+                <p id="sub_titulo">Seu acesso fácil e rápido para agendamentos</p>
+                
+                <div class="botoes_principais">
+                    <a href="#" class="btn_principal primary" onclick="verificarLoginEIrPara(event, 'agendamento')">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        Fazer Agendamento
+                    </a>
+                </div>
+
+                <div class="info_acesso">
+                    <h3><i class="fa-solid fa-info-circle"></i> Informação Importante</h3>
+                    <p>A partir de agora, <span class="destaque">todos os agendamentos requerem cadastro no sistema</span>.</p>
+                    <p>Isso garante maior <span class="destaque">segurança</span>, <span class="destaque">organização</span> e permite que você gerencie seus agendamentos facilmente.</p>
+                    <p>🔒 Seus dados estão protegidos | 📋 Controle total dos seus agendamentos | ⚡ Processo mais rápido</p>
+                    <a href="pag_ajuda.html" class="link-ajuda">
+                        <i class="fa-solid fa-question-circle"></i>
+                        Ajuda | Saiba mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="front-end-javascript/js_pag_inicial.js"></script>
+</body>
+</html>
